@@ -97,9 +97,25 @@ function Example() {
 
 ![Aperçu des composants Button, Badge et Card](./assets/ui-preview.png)
 
-Available components: `Navbar`, `Footer`, `Card`, `Button` (`primary` /
-`accent` / `outline`), `Badge` (`primary` / `accent` / `info` / `warning` /
-`neutral`), `Input`, `Alert` (`info` / `success` / `warning` / `error`).
+Available components:
+
+| Component | Notes |
+| --- | --- |
+| `Navbar` | Header bar with an optional `logo` slot and nav children. |
+| `Footer` | Dark footer container. |
+| `Hero` | Full-width intro/banner section. |
+| `Card` | Bordered surface with soft shadow. |
+| `Grid` | CSS grid layout helper (`columns`, `gap`). |
+| `Button` | Variants: `primary`, `accent`, `outline`. |
+| `Badge` | Tones: `primary`, `accent`, `info`, `warning`, `neutral`. |
+| `Tag` | Selectable pill button (`selected` state). |
+| `Input` | Labeled text input with focus styling. |
+| `Alert` | Tones: `info`, `success`, `warning`, `error`. |
+| `Modal` | Overlay dialog (`open`, `onClose`, `title`). |
+| `Tabs` | Tab list driven by `items` + `activeKey`/`onChange`. |
+| `Breadcrumb` | Linked trail built from an `items` array. |
+| `Divider` | `line` or `tricolor` (blue/red/yellow) separator. |
+| `Spinner` | Small loading indicator. |
 
 Design tokens (`colors`, `radii`, `spacing`, `typography`, `shadows`) are
 also exported from `nglui/ui` for building custom components on the same
