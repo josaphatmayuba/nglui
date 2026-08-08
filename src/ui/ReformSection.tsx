@@ -12,10 +12,33 @@ export interface ReformSectionProps {
   columns?: number;
 }
 
-export function ReformSection({ title, items, seeAllLabel, seeAllHref, columns = 4 }: ReformSectionProps) {
+export function ReformSection({
+  title,
+  items,
+  seeAllLabel,
+  seeAllHref,
+  columns = 4,
+}: ReformSectionProps) {
   return (
-    <section style={{ fontFamily: typography.fontFamily, padding: `${spacing.xl} ${spacing.lg}`, display: "flex", flexDirection: "column", gap: spacing.lg }}>
-      <h2 style={{ margin: 0, color: colors.primary, fontSize: "24px", fontWeight: typography.weightBold }}>{title}</h2>
+    <section
+      style={{
+        fontFamily: typography.fontFamily,
+        padding: `${spacing.xl} ${spacing.lg}`,
+        display: "flex",
+        flexDirection: "column",
+        gap: spacing.lg,
+      }}
+    >
+      <h2
+        style={{
+          margin: 0,
+          color: colors.primary,
+          fontSize: "24px",
+          fontWeight: typography.weightBold,
+        }}
+      >
+        {title}
+      </h2>
       <Grid columns={columns} gap="md">
         {items.map(({ key, ...cardProps }) => (
           <ReformCard key={key} {...cardProps} />

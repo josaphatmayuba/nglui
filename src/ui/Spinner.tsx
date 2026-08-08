@@ -9,10 +9,12 @@ export interface SpinnerProps extends HTMLAttributes<HTMLSpanElement> {
 const KEYFRAMES_ID = "nglui-spinner-keyframes";
 
 function ensureKeyframes() {
-  if (typeof document === "undefined" || document.getElementById(KEYFRAMES_ID)) return;
+  if (typeof document === "undefined" || document.getElementById(KEYFRAMES_ID))
+    return;
   const styleEl = document.createElement("style");
   styleEl.id = KEYFRAMES_ID;
-  styleEl.textContent = "@keyframes nglui-spin { to { transform: rotate(360deg); } }";
+  styleEl.textContent =
+    "@keyframes nglui-spin { to { transform: rotate(360deg); } }";
   document.head.appendChild(styleEl);
 }
 

@@ -28,7 +28,13 @@ export function Avatar({ src, name, size = 40, style, ...rest }: AvatarProps) {
   if (src) {
     return (
       <div {...rest} style={base}>
-        <img src={src} alt={name ?? ""} width={size} height={size} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <img
+          src={src}
+          alt={name ?? ""}
+          width={size}
+          height={size}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </div>
     );
   }

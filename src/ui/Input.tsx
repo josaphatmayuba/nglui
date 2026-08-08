@@ -6,17 +6,35 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
 }
 
-export function Input({ label, id, style, onFocus, onBlur, ...rest }: InputProps) {
+export function Input({
+  label,
+  id,
+  style,
+  onFocus,
+  onBlur,
+  ...rest
+}: InputProps) {
   const generatedId = useId();
   const inputId = id ?? generatedId;
   const [focused, setFocused] = useState(false);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: spacing.xs, fontFamily: typography.fontFamily }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: spacing.xs,
+        fontFamily: typography.fontFamily,
+      }}
+    >
       {label && (
         <label
           htmlFor={inputId}
-          style={{ fontSize: "14px", fontWeight: typography.weightBold, color: colors.text }}
+          style={{
+            fontSize: "14px",
+            fontWeight: typography.weightBold,
+            color: colors.text,
+          }}
         >
           {label}
         </label>

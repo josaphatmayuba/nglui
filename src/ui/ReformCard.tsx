@@ -1,7 +1,10 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { colors, radii, shadows, spacing, typography } from "./tokens.js";
 
-export interface ReformCardProps extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+export interface ReformCardProps extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   category: ReactNode;
   title: ReactNode;
   meta?: ReactNode;
@@ -9,7 +12,15 @@ export interface ReformCardProps extends Omit<HTMLAttributes<HTMLDivElement>, "t
   detailHref?: string;
 }
 
-export function ReformCard({ category, title, meta, downloadHref, detailHref, style, ...rest }: ReformCardProps) {
+export function ReformCard({
+  category,
+  title,
+  meta,
+  downloadHref,
+  detailHref,
+  style,
+  ...rest
+}: ReformCardProps) {
   return (
     <div
       {...rest}
@@ -38,10 +49,32 @@ export function ReformCard({ category, title, meta, downloadHref, detailHref, st
       >
         {category}
       </div>
-      <div style={{ padding: spacing.lg, display: "flex", flexDirection: "column", gap: spacing.sm, flex: 1 }}>
-        <h3 style={{ margin: 0, fontSize: "16px", color: colors.text }}>{title}</h3>
-        {meta && <p style={{ margin: 0, fontSize: "13px", color: colors.textMuted }}>{meta}</p>}
-        <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: spacing.sm, paddingTop: spacing.sm }}>
+      <div
+        style={{
+          padding: spacing.lg,
+          display: "flex",
+          flexDirection: "column",
+          gap: spacing.sm,
+          flex: 1,
+        }}
+      >
+        <h3 style={{ margin: 0, fontSize: "16px", color: colors.text }}>
+          {title}
+        </h3>
+        {meta && (
+          <p style={{ margin: 0, fontSize: "13px", color: colors.textMuted }}>
+            {meta}
+          </p>
+        )}
+        <div
+          style={{
+            marginTop: "auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: spacing.sm,
+            paddingTop: spacing.sm,
+          }}
+        >
           {downloadHref && (
             <a
               href={downloadHref}

@@ -7,7 +7,12 @@ export interface SwitchProps {
   disabled?: boolean;
 }
 
-export function Switch({ checked, onChange, label, disabled = false }: SwitchProps) {
+export function Switch({
+  checked,
+  onChange,
+  label,
+  disabled = false,
+}: SwitchProps) {
   return (
     <label
       style={{

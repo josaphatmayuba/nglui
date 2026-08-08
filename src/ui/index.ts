@@ -71,5 +71,9 @@ export type { ReformSectionProps } from "./ReformSection.js";
 export { ContactSection } from "./ContactSection.js";
 export type { ContactSectionProps } from "./ContactSection.js";
 export { NavbarWithDropdown } from "./NavbarWithDropdown.js";
-export type { NavbarWithDropdownProps, NavLink, NavDropdownItem } from "./NavbarWithDropdown.js";
+export type {
+  NavbarWithDropdownProps,
+  NavLink,
+  NavDropdownItem,
+} from "./NavbarWithDropdown.js";
 export { colors, radii, spacing, typography, shadows } from "./tokens.js";

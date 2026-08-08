@@ -35,7 +35,11 @@ export function NavbarWithDropdown({ logo, links }: NavbarWithDropdownProps) {
         position: "relative",
       }}
     >
-      {logo && <div style={{ display: "flex", alignItems: "center", gap: spacing.sm }}>{logo}</div>}
+      {logo && (
+        <div style={{ display: "flex", alignItems: "center", gap: spacing.sm }}>
+          {logo}
+        </div>
+      )}
       <nav style={{ display: "flex", alignItems: "center", gap: spacing.lg }}>
         {links.map((link) => (
           <div

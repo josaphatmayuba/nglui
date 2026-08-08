@@ -36,12 +36,35 @@ export function FeaturedHero({ slides }: FeaturedHeroProps) {
         gap: spacing.xl,
       }}
     >
-      <div style={{ flex: "1 1 320px", display: "flex", flexDirection: "column", gap: spacing.md }}>
+      <div
+        style={{
+          flex: "1 1 320px",
+          display: "flex",
+          flexDirection: "column",
+          gap: spacing.md,
+        }}
+      >
         {slide.eyebrow && <Badge tone="accent">{slide.eyebrow}</Badge>}
-        <h1 style={{ margin: 0, fontSize: "32px", fontWeight: typography.weightBold, lineHeight: 1.2 }}>{slide.title}</h1>
-        {slide.description && <p style={{ margin: 0, fontSize: "15px", opacity: 0.9 }}>{slide.description}</p>}
+        <h1
+          style={{
+            margin: 0,
+            fontSize: "32px",
+            fontWeight: typography.weightBold,
+            lineHeight: 1.2,
+          }}
+        >
+          {slide.title}
+        </h1>
+        {slide.description && (
+          <p style={{ margin: 0, fontSize: "15px", opacity: 0.9 }}>
+            {slide.description}
+          </p>
+        )}
         {slide.ctaLabel && slide.ctaHref && (
-          <a href={slide.ctaHref} style={{ textDecoration: "none", alignSelf: "flex-start" }}>
+          <a
+            href={slide.ctaHref}
+            style={{ textDecoration: "none", alignSelf: "flex-start" }}
+          >
             <Button variant="accent">{slide.ctaLabel} →</Button>
           </a>
         )}
@@ -50,7 +73,14 @@ export function FeaturedHero({ slides }: FeaturedHeroProps) {
       {slide.image && <div style={{ flex: "1 1 320px" }}>{slide.image}</div>}
 
       {slides.length > 1 && (
-        <div style={{ width: "100%", display: "flex", justifyContent: "center", gap: spacing.xs }}>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            gap: spacing.xs,
+          }}
+        >
           {slides.map((s, index) => (
             <button
               key={s.key}
@@ -63,7 +93,10 @@ export function FeaturedHero({ slides }: FeaturedHeroProps) {
                 borderRadius: "50%",
                 border: "none",
                 cursor: "pointer",
-                backgroundColor: index === activeIndex ? colors.accent : "rgba(255,255,255,0.4)",
+                backgroundColor:
+                  index === activeIndex
+                    ? colors.accent
+                    : "rgba(255,255,255,0.4)",
               }}
             />
           ))}

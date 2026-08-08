@@ -6,13 +6,22 @@ export interface TabItem {
   label: string;
 }
 
-export interface TabsProps extends Omit<HTMLAttributes<HTMLDivElement>, "onChange"> {
+export interface TabsProps extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "onChange"
+> {
   items: TabItem[];
   activeKey: string;
   onChange: (key: string) => void;
 }
 
-export function Tabs({ items, activeKey, onChange, style, ...rest }: TabsProps) {
+export function Tabs({
+  items,
+  activeKey,
+  onChange,
+  style,
+  ...rest
+}: TabsProps) {
   return (
     <div
       role="tablist"
@@ -40,7 +49,9 @@ export function Tabs({ items, activeKey, onChange, style, ...rest }: TabsProps) 
               cursor: "pointer",
               padding: `${spacing.sm} 0`,
               fontFamily: typography.fontFamily,
-              fontWeight: active ? typography.weightBold : typography.weightRegular,
+              fontWeight: active
+                ? typography.weightBold
+                : typography.weightRegular,
               fontSize: "15px",
               color: active ? colors.primary : colors.textMuted,
               borderBottom: `2px solid ${active ? colors.primary : "transparent"}`,

@@ -1,13 +1,23 @@
 import type { HTMLAttributes, MouseEvent, ReactNode } from "react";
 import { colors, radii, shadows, spacing, typography } from "./tokens.js";
 
-export interface ModalProps extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+export interface ModalProps extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   open: boolean;
   onClose?: () => void;
   title?: ReactNode;
 }
 
-export function Modal({ open, onClose, title, children, style, ...rest }: ModalProps) {
+export function Modal({
+  open,
+  onClose,
+  title,
+  children,
+  style,
+  ...rest
+}: ModalProps) {
   if (!open) return null;
 
   function handleOverlayClick(event: MouseEvent<HTMLDivElement>) {
@@ -44,7 +54,9 @@ export function Modal({ open, onClose, title, children, style, ...rest }: ModalP
         }}
       >
         {title && (
-          <h3 style={{ margin: `0 0 ${spacing.md}`, color: colors.primary }}>{title}</h3>
+          <h3 style={{ margin: `0 0 ${spacing.md}`, color: colors.primary }}>
+            {title}
+          </h3>
         )}
         {children}
       </div>

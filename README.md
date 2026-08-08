@@ -4,6 +4,8 @@ A small, dependency-free TypeScript utility library. Ships ESM + CJS builds with
 
 [![npm](https://img.shields.io/npm/v/nglui.svg)](https://www.npmjs.com/package/nglui)
 
+**[Browse the live component gallery →](https://josaphatmayuba.github.io/nglui/)**
+
 ## Install
 
 ```bash
@@ -85,9 +87,15 @@ function Example() {
         <Button variant="primary">Lire l'article</Button>
       </Card>
 
-      <Input label="Adresse email" type="email" placeholder="vous@example.com" />
+      <Input
+        label="Adresse email"
+        type="email"
+        placeholder="vous@example.com"
+      />
 
-      <Alert tone="warning">Vérifiez vos informations avant de continuer.</Alert>
+      <Alert tone="warning">
+        Vérifiez vos informations avant de continuer.
+      </Alert>
 
       <Footer>© 2026 Mon site</Footer>
     </>
@@ -99,48 +107,48 @@ function Example() {
 
 Available components:
 
-| Component | Notes |
-| --- | --- |
-| `Navbar` | Header bar with an optional `logo` slot and nav children. |
-| `Footer` | Dark footer container. |
-| `Hero` | Full-width intro/banner section. |
-| `Card` | Bordered surface with soft shadow. |
-| `Grid` | CSS grid layout helper (`columns`, `gap`). |
-| `Button` | Variants: `primary`, `accent`, `outline`. |
-| `Badge` | Tones: `primary`, `accent`, `info`, `warning`, `neutral`. |
-| `Tag` | Selectable pill button (`selected` state). |
-| `Input` | Labeled text input with focus styling. |
-| `Alert` | Tones: `info`, `success`, `warning`, `error`. |
-| `Modal` | Overlay dialog (`open`, `onClose`, `title`). |
-| `Tabs` | Tab list driven by `items` + `activeKey`/`onChange`. |
-| `Breadcrumb` | Linked trail built from an `items` array. |
-| `Divider` | `line`, or `tricolor` accepting a custom `colors` array (any length) or a CSS `gradient`. |
-| `Spinner` | Small loading indicator. |
-| `PageHeader` | Centered title + subtitle banner on a primary background. |
-| `SearchBar` | Pill-shaped search input with a leading icon. |
-| `Select` | Styled native `<select>`. |
-| `ViewToggle` | Grid/list view switcher (`value`, `onChange`). |
-| `SegmentedTabs` | Pill-style tab group (alternative to `Tabs`' underline style). |
-| `Skeleton` | Pulsing placeholder block for loading states. |
-| `FormGrid` | Responsive form field grid (`columns`). |
-| `InfoBlock` | Icon + title + description row, e.g. contact details. |
-| `ReformCard` | Card with a category banner, title, meta, and stacked download/detail buttons. |
-| `ImageBadge` | Absolutely positioned badge for overlaying an image corner. |
-| `Pagination` | Page number navigation with prev/next controls. |
-| `Accordion` | Collapsible sections driven by an `items` array. |
-| `Table` | Data table with a typed `columns`/`rows` API. |
-| `Avatar` | Image avatar or initials fallback (`src`, `name`, `size`). |
-| `Toast` | Dismissible inline notification. |
-| `Checkbox` / `Radio` / `Switch` | Labeled form controls. |
+| Component                       | Notes                                                                                     |
+| ------------------------------- | ----------------------------------------------------------------------------------------- |
+| `Navbar`                        | Header bar with an optional `logo` slot and nav children.                                 |
+| `Footer`                        | Dark footer container.                                                                    |
+| `Hero`                          | Full-width intro/banner section.                                                          |
+| `Card`                          | Bordered surface with soft shadow.                                                        |
+| `Grid`                          | CSS grid layout helper (`columns`, `gap`).                                                |
+| `Button`                        | Variants: `primary`, `accent`, `outline`.                                                 |
+| `Badge`                         | Tones: `primary`, `accent`, `info`, `warning`, `neutral`.                                 |
+| `Tag`                           | Selectable pill button (`selected` state).                                                |
+| `Input`                         | Labeled text input with focus styling.                                                    |
+| `Alert`                         | Tones: `info`, `success`, `warning`, `error`.                                             |
+| `Modal`                         | Overlay dialog (`open`, `onClose`, `title`).                                              |
+| `Tabs`                          | Tab list driven by `items` + `activeKey`/`onChange`.                                      |
+| `Breadcrumb`                    | Linked trail built from an `items` array.                                                 |
+| `Divider`                       | `line`, or `tricolor` accepting a custom `colors` array (any length) or a CSS `gradient`. |
+| `Spinner`                       | Small loading indicator.                                                                  |
+| `PageHeader`                    | Centered title + subtitle banner on a primary background.                                 |
+| `SearchBar`                     | Pill-shaped search input with a leading icon.                                             |
+| `Select`                        | Styled native `<select>`.                                                                 |
+| `ViewToggle`                    | Grid/list view switcher (`value`, `onChange`).                                            |
+| `SegmentedTabs`                 | Pill-style tab group (alternative to `Tabs`' underline style).                            |
+| `Skeleton`                      | Pulsing placeholder block for loading states.                                             |
+| `FormGrid`                      | Responsive form field grid (`columns`).                                                   |
+| `InfoBlock`                     | Icon + title + description row, e.g. contact details.                                     |
+| `ReformCard`                    | Card with a category banner, title, meta, and stacked download/detail buttons.            |
+| `ImageBadge`                    | Absolutely positioned badge for overlaying an image corner.                               |
+| `Pagination`                    | Page number navigation with prev/next controls.                                           |
+| `Accordion`                     | Collapsible sections driven by an `items` array.                                          |
+| `Table`                         | Data table with a typed `columns`/`rows` API.                                             |
+| `Avatar`                        | Image avatar or initials fallback (`src`, `name`, `size`).                                |
+| `Toast`                         | Dismissible inline notification.                                                          |
+| `Checkbox` / `Radio` / `Switch` | Labeled form controls.                                                                    |
 
 Composite sections (built from the primitives above):
 
-| Component | Notes |
-| --- | --- |
-| `FeaturedHero` | Hero banner with eyebrow badge, title, CTA, optional image, and slide dots. |
-| `ReformSection` | Section title + a `Grid` of `ReformCard`s + an optional "see all" button. |
-| `ContactSection` | Page header + side-by-side info block and contact form. |
-| `NavbarWithDropdown` | `Navbar` variant where links can expose a hover dropdown menu. |
+| Component            | Notes                                                                       |
+| -------------------- | --------------------------------------------------------------------------- |
+| `FeaturedHero`       | Hero banner with eyebrow badge, title, CTA, optional image, and slide dots. |
+| `ReformSection`      | Section title + a `Grid` of `ReformCard`s + an optional "see all" button.   |
+| `ContactSection`     | Page header + side-by-side info block and contact form.                     |
+| `NavbarWithDropdown` | `Navbar` variant where links can expose a hover dropdown menu.              |
 
 Design tokens (`colors`, `radii`, `spacing`, `typography`, `shadows`) are
 also exported from `nglui/ui` for building custom components on the same

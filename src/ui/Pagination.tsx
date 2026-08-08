@@ -19,7 +19,12 @@ export function Pagination({ page, pageCount, onChange }: PaginationProps) {
   return (
     <nav
       aria-label="Pagination"
-      style={{ display: "flex", alignItems: "center", gap: spacing.xs, fontFamily: typography.fontFamily }}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: spacing.xs,
+        fontFamily: typography.fontFamily,
+      }}
     >
       <button
         type="button"

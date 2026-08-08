@@ -20,7 +20,11 @@ export function Navbar({ logo, children, style, ...rest }: NavbarProps) {
         ...style,
       }}
     >
-      {logo && <div style={{ display: "flex", alignItems: "center", gap: spacing.sm }}>{logo}</div>}
+      {logo && (
+        <div style={{ display: "flex", alignItems: "center", gap: spacing.sm }}>
+          {logo}
+        </div>
+      )}
       <nav
         style={{
           display: "flex",

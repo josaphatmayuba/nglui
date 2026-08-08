@@ -3,7 +3,11 @@ import { colors } from "./tokens.js";
 
 export type DividerVariant = "line" | "tricolor";
 
-const DEFAULT_BAND_COLORS: readonly string[] = [colors.info, colors.accent, colors.warning];
+const DEFAULT_BAND_COLORS: readonly string[] = [
+  colors.info,
+  colors.accent,
+  colors.warning,
+];
 
 export interface DividerProps extends HTMLAttributes<HTMLDivElement> {
   variant?: DividerVariant;
@@ -14,7 +18,14 @@ export interface DividerProps extends HTMLAttributes<HTMLDivElement> {
   height?: number;
 }
 
-export function Divider({ variant = "line", colors: bandColors, gradient, height = 4, style, ...rest }: DividerProps) {
+export function Divider({
+  variant = "line",
+  colors: bandColors,
+  gradient,
+  height = 4,
+  style,
+  ...rest
+}: DividerProps) {
   if (variant === "tricolor") {
     const bands = gradient ? null : (bandColors ?? DEFAULT_BAND_COLORS);
     const barStyle: CSSProperties = {
@@ -28,7 +39,10 @@ export function Divider({ variant = "line", colors: bandColors, gradient, height
     return (
       <div {...rest} style={barStyle}>
         {bands?.map((color, index) => (
-          <div key={`${color}-${index}`} style={{ flex: 1, backgroundColor: color }} />
+          <div
+            key={`${color}-${index}`}
+            style={{ flex: 1, backgroundColor: color }}
+          />
         ))}
       </div>
     );

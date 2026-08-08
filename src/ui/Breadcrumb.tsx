@@ -28,13 +28,26 @@ export function Breadcrumb({ items, style, ...rest }: BreadcrumbProps) {
       {items.map((item, index) => {
         const isLast = index === items.length - 1;
         return (
-          <span key={`${item.label}-${index}`} style={{ display: "flex", alignItems: "center", gap: spacing.xs }}>
+          <span
+            key={`${item.label}-${index}`}
+            style={{ display: "flex", alignItems: "center", gap: spacing.xs }}
+          >
             {item.href && !isLast ? (
-              <a href={item.href} style={{ color: colors.primary, textDecoration: "none" }}>
+              <a
+                href={item.href}
+                style={{ color: colors.primary, textDecoration: "none" }}
+              >
                 {item.label}
               </a>
             ) : (
-              <span style={{ color: isLast ? colors.text : colors.textMuted, fontWeight: isLast ? typography.weightBold : typography.weightRegular }}>
+              <span
+                style={{
+                  color: isLast ? colors.text : colors.textMuted,
+                  fontWeight: isLast
+                    ? typography.weightBold
+                    : typography.weightRegular,
+                }}
+              >
                 {item.label}
               </span>
             )}

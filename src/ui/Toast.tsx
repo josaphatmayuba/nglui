@@ -14,7 +14,13 @@ const toneAccents: Record<AlertTone, string> = {
   error: colors.accentDark,
 };
 
-export function Toast({ tone = "info", onDismiss, style, children, ...rest }: ToastProps) {
+export function Toast({
+  tone = "info",
+  onDismiss,
+  style,
+  children,
+  ...rest
+}: ToastProps) {
   return (
     <div
       role="status"

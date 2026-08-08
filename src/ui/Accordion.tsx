@@ -17,11 +17,19 @@ export function Accordion({ items, defaultOpenKey }: AccordionProps) {
   const [openKey, setOpenKey] = useState<string | null>(defaultOpenKey ?? null);
 
   return (
-    <div style={{ fontFamily: typography.fontFamily, borderTop: `1px solid ${colors.border}` }}>
+    <div
+      style={{
+        fontFamily: typography.fontFamily,
+        borderTop: `1px solid ${colors.border}`,
+      }}
+    >
       {items.map((item) => {
         const open = item.key === openKey;
         return (
-          <div key={item.key} style={{ borderBottom: `1px solid ${colors.border}` }}>
+          <div
+            key={item.key}
+            style={{ borderBottom: `1px solid ${colors.border}` }}
+          >
             <button
               type="button"
               aria-expanded={open}
@@ -43,10 +51,23 @@ export function Accordion({ items, defaultOpenKey }: AccordionProps) {
               }}
             >
               {item.title}
-              <span style={{ color: colors.primary, transform: open ? "rotate(180deg)" : "none" }}>▾</span>
+              <span
+                style={{
+                  color: colors.primary,
+                  transform: open ? "rotate(180deg)" : "none",
+                }}
+              >
+                ▾
+              </span>
             </button>
             {open && (
-              <div style={{ paddingBottom: spacing.md, color: colors.textMuted, fontSize: "14px" }}>
+              <div
+                style={{
+                  paddingBottom: spacing.md,
+                  color: colors.textMuted,
+                  fontSize: "14px",
+                }}
+              >
                 {item.content}
               </div>
             )}

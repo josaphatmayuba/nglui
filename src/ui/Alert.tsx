@@ -7,11 +7,30 @@ export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   tone?: AlertTone;
 }
 
-const toneStyles: Record<AlertTone, { background: string; border: string; color: string }> = {
-  info: { background: "rgb(224, 242, 254)", border: colors.info, color: "rgb(12, 74, 110)" },
-  success: { background: "rgb(220, 252, 231)", border: "rgb(21, 128, 61)", color: "rgb(20, 83, 45)" },
-  warning: { background: "rgb(254, 249, 195)", border: colors.warning, color: "rgb(113, 63, 18)" },
-  error: { background: "rgb(254, 226, 226)", border: colors.accentDark, color: "rgb(127, 29, 29)" },
+const toneStyles: Record<
+  AlertTone,
+  { background: string; border: string; color: string }
+> = {
+  info: {
+    background: "rgb(224, 242, 254)",
+    border: colors.info,
+    color: "rgb(12, 74, 110)",
+  },
+  success: {
+    background: "rgb(220, 252, 231)",
+    border: "rgb(21, 128, 61)",
+    color: "rgb(20, 83, 45)",
+  },
+  warning: {
+    background: "rgb(254, 249, 195)",
+    border: colors.warning,
+    color: "rgb(113, 63, 18)",
+  },
+  error: {
+    background: "rgb(254, 226, 226)",
+    border: colors.accentDark,
+    color: "rgb(127, 29, 29)",
+  },
 };
 
 export function Alert({ tone = "info", style, ...rest }: AlertProps) {

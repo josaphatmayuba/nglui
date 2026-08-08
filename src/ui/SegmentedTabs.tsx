@@ -7,7 +7,11 @@ export interface SegmentedTabsProps {
   onChange: (key: string) => void;
 }
 
-export function SegmentedTabs({ items, activeKey, onChange }: SegmentedTabsProps) {
+export function SegmentedTabs({
+  items,
+  activeKey,
+  onChange,
+}: SegmentedTabsProps) {
   return (
     <div
       role="tablist"

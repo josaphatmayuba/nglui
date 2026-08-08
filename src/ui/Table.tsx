@@ -15,7 +15,14 @@ export interface TableProps<T> {
 
 export function Table<T>({ columns, rows, rowKey }: TableProps<T>) {
   return (
-    <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: typography.fontFamily, fontSize: "14px" }}>
+    <table
+      style={{
+        width: "100%",
+        borderCollapse: "collapse",
+        fontFamily: typography.fontFamily,
+        fontSize: "14px",
+      }}
+    >
       <thead>
         <tr>
           {columns.map((col) => (
@@ -39,9 +46,22 @@ export function Table<T>({ columns, rows, rowKey }: TableProps<T>) {
       </thead>
       <tbody>
         {rows.map((row, index) => (
-          <tr key={rowKey(row)} style={{ backgroundColor: index % 2 === 1 ? colors.surfaceSubtle : "transparent" }}>
+          <tr
+            key={rowKey(row)}
+            style={{
+              backgroundColor:
+                index % 2 === 1 ? colors.surfaceSubtle : "transparent",
+            }}
+          >
             {columns.map((col) => (
-              <td key={col.key} style={{ padding: `${spacing.sm} ${spacing.md}`, borderBottom: `1px solid ${colors.border}`, color: colors.text }}>
+              <td
+                key={col.key}
+                style={{
+                  padding: `${spacing.sm} ${spacing.md}`,
+                  borderBottom: `1px solid ${colors.border}`,
+                  color: colors.text,
+                }}
+              >
                 {col.render(row)}
               </td>
             ))}

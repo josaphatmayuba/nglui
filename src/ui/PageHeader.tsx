@@ -1,12 +1,20 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { colors, spacing, typography } from "./tokens.js";
 
-export interface PageHeaderProps extends Omit<HTMLAttributes<HTMLElement>, "title"> {
+export interface PageHeaderProps extends Omit<
+  HTMLAttributes<HTMLElement>,
+  "title"
+> {
   title: ReactNode;
   subtitle?: ReactNode;
 }
 
-export function PageHeader({ title, subtitle, style, ...rest }: PageHeaderProps) {
+export function PageHeader({
+  title,
+  subtitle,
+  style,
+  ...rest
+}: PageHeaderProps) {
   return (
     <header
       {...rest}
@@ -23,9 +31,24 @@ export function PageHeader({ title, subtitle, style, ...rest }: PageHeaderProps)
         ...style,
       }}
     >
-      <h1 style={{ margin: 0, fontSize: "36px", fontWeight: typography.weightBold }}>{title}</h1>
+      <h1
+        style={{
+          margin: 0,
+          fontSize: "36px",
+          fontWeight: typography.weightBold,
+        }}
+      >
+        {title}
+      </h1>
       {subtitle && (
-        <p style={{ margin: 0, fontSize: "16px", fontWeight: typography.weightRegular, maxWidth: "640px" }}>
+        <p
+          style={{
+            margin: 0,
+            fontSize: "16px",
+            fontWeight: typography.weightRegular,
+            maxWidth: "640px",
+          }}
+        >
           {subtitle}
         </p>
       )}

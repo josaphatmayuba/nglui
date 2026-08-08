@@ -10,7 +10,13 @@ export interface ViewToggleProps {
 
 function GridIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <rect x="3" y="3" width="7" height="7" />
       <rect x="14" y="3" width="7" height="7" />
       <rect x="3" y="14" width="7" height="7" />
@@ -21,7 +27,15 @@ function GridIcon() {
 
 function ListIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      aria-hidden="true"
+    >
       <line x1="3" y1="6" x2="21" y2="6" />
       <line x1="3" y1="12" x2="21" y2="12" />
       <line x1="3" y1="18" x2="21" y2="18" />
@@ -36,7 +50,15 @@ export function ViewToggle({ value, onChange }: ViewToggleProps) {
   ];
 
   return (
-    <div style={{ display: "inline-flex", gap: spacing.xs, backgroundColor: colors.surfaceMuted, padding: spacing.xs, borderRadius: radii.sm }}>
+    <div
+      style={{
+        display: "inline-flex",
+        gap: spacing.xs,
+        backgroundColor: colors.surfaceMuted,
+        padding: spacing.xs,
+        borderRadius: radii.sm,
+      }}
+    >
       {options.map((option) => {
         const active = option.mode === value;
         return (
