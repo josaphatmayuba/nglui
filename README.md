@@ -116,6 +116,16 @@ Available components:
 | `Breadcrumb` | Linked trail built from an `items` array. |
 | `Divider` | `line`, or `tricolor` accepting a custom `colors` array (any length) or a CSS `gradient`. |
 | `Spinner` | Small loading indicator. |
+| `PageHeader` | Centered title + subtitle banner on a primary background. |
+| `SearchBar` | Pill-shaped search input with a leading icon. |
+| `Select` | Styled native `<select>`. |
+| `ViewToggle` | Grid/list view switcher (`value`, `onChange`). |
+| `SegmentedTabs` | Pill-style tab group (alternative to `Tabs`' underline style). |
+| `Skeleton` | Pulsing placeholder block for loading states. |
+| `FormGrid` | Responsive form field grid (`columns`). |
+| `InfoBlock` | Icon + title + description row, e.g. contact details. |
+| `ReformCard` | Card with a category banner, title, meta, and stacked download/detail buttons. |
+| `ImageBadge` | Absolutely positioned badge for overlaying an image corner. |
 
 Design tokens (`colors`, `radii`, `spacing`, `typography`, `shadows`) are
 also exported from `nglui/ui` for building custom components on the same
