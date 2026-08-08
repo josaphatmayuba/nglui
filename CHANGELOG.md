@@ -1,5 +1,15 @@
 # nglui
 
+## 0.3.0
+
+### Minor Changes
+
+- Add 10 more `nglui/ui` components based on real UI patterns found across the source site's subpages: `PageHeader`, `SearchBar`, `Select`, `ViewToggle`, `SegmentedTabs`, `Skeleton`, `FormGrid`, `InfoBlock`, `ReformCard`, `ImageBadge`.
+
+### Patch Changes
+
+- Fix `PageHeader` and `InfoBlock` prop types (`title: ReactNode` conflicted with the native `HTMLAttributes.title: string`), and export `PageHeader` from `nglui/ui`.
+
 ## 0.2.0
 
 ### Minor Changes
