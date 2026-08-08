@@ -19,17 +19,19 @@ export interface NavLink {
 export interface NavbarWithDropdownProps {
   logo?: ReactNode;
   links: NavLink[];
+  onSearchClick?: () => void;
 }
 
-export function NavbarWithDropdown({ logo, links }: NavbarWithDropdownProps) {
+export function NavbarWithDropdown({
+  logo,
+  links,
+  onSearchClick,
+}: NavbarWithDropdownProps) {
   const [openKey, setOpenKey] = useState<string | null>(null);
   const openLink = links.find((link) => link.key === openKey);
 
   return (
-    <div
-      style={{ position: "relative" }}
-      onMouseLeave={() => setOpenKey(null)}
-    >
+    <div style={{ position: "relative" }} onMouseLeave={() => setOpenKey(null)}>
       <header
         style={{
           backgroundColor: colors.primary,
@@ -87,6 +89,35 @@ export function NavbarWithDropdown({ logo, links }: NavbarWithDropdownProps) {
               </a>
             );
           })}
+          {onSearchClick && (
+            <button
+              type="button"
+              onClick={onSearchClick}
+              aria-label="Rechercher"
+              style={{
+                background: "none",
+                border: "none",
+                color: colors.textOnPrimary,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                padding: spacing.xs,
+              }}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
+          )}
         </nav>
       </header>
 
@@ -124,9 +155,14 @@ export function NavbarWithDropdown({ logo, links }: NavbarWithDropdownProps) {
                 <span
                   style={{
                     color: colors.primary,
+                    backgroundColor: colors.surfaceMuted,
+                    borderRadius: radii.md,
+                    width: "36px",
+                    height: "36px",
                     flexShrink: 0,
                     display: "flex",
-                    marginTop: "2px",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
                   {item.icon}

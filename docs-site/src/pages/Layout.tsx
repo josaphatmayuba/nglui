@@ -11,6 +11,10 @@ import {
   Input,
   colors,
   spacing,
+  DocumentIcon,
+  ChartIcon,
+  ImageIcon,
+  BookIcon,
 } from "nglui/ui";
 import { Demo } from "../Demo.js";
 
@@ -40,6 +44,7 @@ export function NavbarWithDropdownPage() {
     >
       <NavbarWithDropdown
         logo={<strong>Mon site</strong>}
+        onSearchClick={() => {}}
         links={[
           { key: "home", label: "Accueil", href: "#" },
           {
@@ -50,25 +55,25 @@ export function NavbarWithDropdownPage() {
                 label: "Actualités",
                 description: "Les dernières nouvelles et informations",
                 href: "#",
-                icon: "📰",
+                icon: <DocumentIcon />,
               },
               {
                 label: "Statistiques",
                 description: "Données et analyses",
                 href: "#",
-                icon: "📊",
+                icon: <ChartIcon />,
               },
               {
                 label: "Rapports annuels",
                 description: "Rapports financiers et économiques",
                 href: "#",
-                icon: "📘",
+                icon: <BookIcon />,
               },
               {
                 label: "Documents",
                 description: "Documents et publications diverses",
                 href: "#",
-                icon: "📄",
+                icon: <ImageIcon />,
               },
             ],
           },

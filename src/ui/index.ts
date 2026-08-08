@@ -76,4 +76,6 @@ export type {
   NavLink,
   NavDropdownItem,
 } from "./NavbarWithDropdown.js";
+export { DocumentIcon, ChartIcon, ImageIcon, BookIcon } from "./icons.js";
+export type { IconProps } from "./icons.js";
 export { colors, radii, spacing, typography, shadows } from "./tokens.js";

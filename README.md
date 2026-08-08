@@ -148,7 +148,11 @@ Composite sections (built from the primitives above):
 | `FeaturedHero`       | Hero banner with eyebrow badge, title, CTA, optional image, and slide dots. |
 | `CategorySection`    | Section title + a `Grid` of `CategoryCard`s + an optional "see all" button. |
 | `ContactSection`     | Page header + side-by-side info block and contact form.                     |
-| `NavbarWithDropdown` | `Navbar` variant where links can expose a hover dropdown menu.              |
+| `NavbarWithDropdown` | `Navbar` variant with a full-width mega-menu panel (icon + title + description grid). |
+
+`DocumentIcon`, `ChartIcon`, `ImageIcon`, and `BookIcon` are also exported —
+small stroke-style SVG icons for use in `NavbarWithDropdown` items or
+anywhere else.
 
 Design tokens (`colors`, `radii`, `spacing`, `typography`, `shadows`) are
 also exported from `nglui/ui` for building custom components on the same

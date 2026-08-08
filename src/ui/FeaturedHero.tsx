@@ -75,9 +75,9 @@ export function FeaturedHero({ slides }: FeaturedHeroProps) {
       {slides.length > 1 && (
         <div
           style={{
-            width: "100%",
+            flexBasis: "100%",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-start",
             gap: spacing.xs,
           }}
         >
