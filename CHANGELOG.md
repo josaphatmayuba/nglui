@@ -1,5 +1,11 @@
 # nglui
 
+## 0.4.1
+
+### Patch Changes
+
+- Add a live component gallery (docs-site/) deployed to GitHub Pages, showing every nglui/ui component rendered from the compiled library build. Linked from the README.
+
 ## 0.4.0
 
 ### Minor Changes
