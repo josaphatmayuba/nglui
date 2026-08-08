@@ -114,7 +114,7 @@ Available components:
 | `Modal` | Overlay dialog (`open`, `onClose`, `title`). |
 | `Tabs` | Tab list driven by `items` + `activeKey`/`onChange`. |
 | `Breadcrumb` | Linked trail built from an `items` array. |
-| `Divider` | `line` or `tricolor` (blue/red/yellow) separator. |
+| `Divider` | `line`, or `tricolor` accepting a custom `colors` array (any length) or a CSS `gradient`. |
 | `Spinner` | Small loading indicator. |
 
 Design tokens (`colors`, `radii`, `spacing`, `typography`, `shadows`) are
