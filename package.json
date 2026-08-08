@@ -1,6 +1,6 @@
 {
   "name": "nglui",
-  "version": "0.4.1",
+  "version": "1.1.0",
   "description": "A small, dependency-free TypeScript utility library.",
   "keywords": [
     "typescript",

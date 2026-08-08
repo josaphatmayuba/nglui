@@ -1,5 +1,17 @@
 # nglui
 
+## 1.1.0
+
+### Minor Changes
+
+- `NavbarWithDropdown` now renders a full-width dropdown panel anchored under the whole navbar, with a 2-column grid of icon + title + description items, instead of a narrow list under the single link. `NavDropdownItem` gained optional `description` and `icon` fields.
+
+## 1.0.0
+
+### Major Changes
+
+- Rename `ReformCard`/`ReformCardProps` to `CategoryCard`/`CategoryCardProps` and `ReformSection`/`ReformSectionProps` to `CategorySection`/`CategorySectionProps`. Also removed all example content referencing a specific country/city (now generic placeholder data). This is a breaking rename — update imports accordingly.
+
 ## 0.4.1
 
 ### Patch Changes
