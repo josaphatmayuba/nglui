@@ -1,5 +1,11 @@
 # nglui
 
+## 0.4.0
+
+### Minor Changes
+
+- Add 12 more `nglui/ui` components: primitives `Pagination`, `Accordion`, `Table`, `Avatar`, `Toast`, `Checkbox`, `Radio`, `Switch`, and composite sections `FeaturedHero`, `ReformSection`, `ContactSection`, `NavbarWithDropdown` built from the existing primitives.
+
 ## 0.3.0
 
 ### Minor Changes
