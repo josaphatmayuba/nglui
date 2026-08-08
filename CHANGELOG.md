@@ -1,5 +1,11 @@
 # nglui
 
+## 1.2.0
+
+### Minor Changes
+
+- Add stroke-style SVG icons (`DocumentIcon`, `ChartIcon`, `ImageIcon`, `BookIcon`). `NavbarWithDropdown` dropdown items now render icons inside a rounded square badge, and the navbar gained an optional `onSearchClick` handler that renders a search icon button, matching a full mega-menu layout more closely.
+
 ## 1.1.0
 
 ### Minor Changes
