@@ -18,9 +18,9 @@ interface Row {
 }
 
 const rows: Row[] = [
-  { id: "1", name: "Compte Unique du Trésor", status: "En cours" },
-  { id: "2", name: "Facture normalisée", status: "Planifiée" },
-  { id: "3", name: "Masse salariale", status: "Terminée" },
+  { id: "1", name: "Migration base de données", status: "En cours" },
+  { id: "2", name: "Refonte de la facturation", status: "Planifiée" },
+  { id: "3", name: "Audit de sécurité", status: "Terminée" },
 ];
 
 export function TablePage() {
@@ -28,7 +28,7 @@ export function TablePage() {
     <Demo name="Table" description="Data table with a typed columns/rows API.">
       <Table
         columns={[
-          { key: "name", header: "Réforme", render: (r: Row) => r.name },
+          { key: "name", header: "Projet", render: (r: Row) => r.name },
           { key: "status", header: "Statut", render: (r: Row) => r.status },
         ]}
         rows={rows}
@@ -45,8 +45,8 @@ export function AvatarPage() {
       description="Image avatar or initials fallback (src, name, size)."
     >
       <div style={{ display: "flex", gap: spacing.md, alignItems: "center" }}>
-        <Avatar name="Josaphat Mayuba" />
-        <Avatar name="Jean Dupont" size={56} />
+        <Avatar name="Alex Martin" />
+        <Avatar name="Sam Lefèvre" size={56} />
       </div>
     </Demo>
   );
@@ -82,7 +82,7 @@ export function InfoBlockPage() {
       description="Icon + title + description row, e.g. contact details."
     >
       <InfoBlock icon="📍" title="Adresse">
-        Centre financier de Kinshasa, Kinshasa - Gombe, RDC
+        12 rue des Lilas
       </InfoBlock>
     </Demo>
   );

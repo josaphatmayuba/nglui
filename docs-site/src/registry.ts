@@ -51,7 +51,12 @@ export const registry: ComponentGroup[] = [
   },
   {
     title: "Composite sections",
-    items: ["ReformCard", "ReformSection", "FeaturedHero", "ContactSection"],
+    items: [
+      "CategoryCard",
+      "CategorySection",
+      "FeaturedHero",
+      "ContactSection",
+    ],
   },
 ];
 

@@ -36,7 +36,7 @@ export function NavbarWithDropdownPage() {
   return (
     <Demo
       name="NavbarWithDropdown"
-      description="Navbar variant where links can expose a hover dropdown menu."
+      description="Navbar variant where a link can expose a full-width dropdown panel with a 2-column grid of icon + title + description items."
     >
       <NavbarWithDropdown
         logo={<strong>Mon site</strong>}
@@ -46,8 +46,30 @@ export function NavbarWithDropdownPage() {
             key: "pubs",
             label: "Publications",
             items: [
-              { label: "Rapports", href: "#" },
-              { label: "Communiqués", href: "#" },
+              {
+                label: "Actualités",
+                description: "Les dernières nouvelles et informations",
+                href: "#",
+                icon: "📰",
+              },
+              {
+                label: "Statistiques",
+                description: "Données et analyses",
+                href: "#",
+                icon: "📊",
+              },
+              {
+                label: "Rapports annuels",
+                description: "Rapports financiers et économiques",
+                href: "#",
+                icon: "📘",
+              },
+              {
+                label: "Documents",
+                description: "Documents et publications diverses",
+                href: "#",
+                icon: "📄",
+              },
             ],
           },
           { key: "contact", label: "Contact", href: "#" },

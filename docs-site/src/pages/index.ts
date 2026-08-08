@@ -43,8 +43,8 @@ import {
   ModalPage,
 } from "./DataDisplay.js";
 import {
-  ReformCardPage,
-  ReformSectionPage,
+  CategoryCardPage,
+  CategorySectionPage,
   FeaturedHeroPage,
   ContactSectionPage,
 } from "./Composite.js";
@@ -83,8 +83,8 @@ export const pages: Record<string, ComponentType> = {
   ImageBadge: ImageBadgePage,
   InfoBlock: InfoBlockPage,
   Modal: ModalPage,
-  ReformCard: ReformCardPage,
-  ReformSection: ReformSectionPage,
+  CategoryCard: CategoryCardPage,
+  CategorySection: CategorySectionPage,
   FeaturedHero: FeaturedHeroPage,
   ContactSection: ContactSectionPage,
 };

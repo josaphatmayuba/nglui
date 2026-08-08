@@ -1,7 +1,7 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { colors, radii, shadows, spacing, typography } from "./tokens.js";
 
-export interface ReformCardProps extends Omit<
+export interface CategoryCardProps extends Omit<
   HTMLAttributes<HTMLDivElement>,
   "title"
 > {
@@ -12,7 +12,7 @@ export interface ReformCardProps extends Omit<
   detailHref?: string;
 }
 
-export function ReformCard({
+export function CategoryCard({
   category,
   title,
   meta,
@@ -20,7 +20,7 @@ export function ReformCard({
   detailHref,
   style,
   ...rest
-}: ReformCardProps) {
+}: CategoryCardProps) {
   return (
     <div
       {...rest}

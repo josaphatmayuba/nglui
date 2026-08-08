@@ -1,21 +1,21 @@
 import {
-  ReformCard,
-  ReformSection,
+  CategoryCard,
+  CategorySection,
   FeaturedHero,
   ContactSection,
 } from "nglui/ui";
 import { Demo } from "../Demo.js";
 
-export function ReformCardPage() {
+export function CategoryCardPage() {
   return (
     <Demo
-      name="ReformCard"
+      name="CategoryCard"
       description="Card with a category banner, title, meta, and stacked download/detail buttons."
     >
       <div style={{ maxWidth: "260px" }}>
-        <ReformCard
-          category="Réformes"
-          title="Compte Unique du Trésor (CUT)"
+        <CategoryCard
+          category="Projets"
+          title="Modernisation du système interne"
           meta="Échéance : 15 novembre 2026"
           downloadHref="#"
           detailHref="#"
@@ -25,34 +25,34 @@ export function ReformCardPage() {
   );
 }
 
-export function ReformSectionPage() {
+export function CategorySectionPage() {
   return (
     <Demo
-      name="ReformSection"
-      description="Section title + a Grid of ReformCards + an optional see-all button."
+      name="CategorySection"
+      description="Section title + a Grid of CategoryCards + an optional see-all button."
     >
-      <ReformSection
-        title="Réformes initiées"
+      <CategorySection
+        title="Projets en cours"
         columns={2}
         items={[
           {
             key: "1",
-            category: "Réformes",
-            title: "Compte Unique du Trésor",
+            category: "Projets",
+            title: "Modernisation du système interne",
             meta: "Échéance : 15 nov. 2026",
             downloadHref: "#",
             detailHref: "#",
           },
           {
             key: "2",
-            category: "Réformes",
-            title: "Facture normalisée",
+            category: "Projets",
+            title: "Refonte du portail public",
             meta: "Échéance : 31 déc. 2026",
             downloadHref: "#",
             detailHref: "#",
           },
         ]}
-        seeAllLabel="Voir toutes les réformes"
+        seeAllLabel="Voir tous les projets"
         seeAllHref="#"
       />
     </Demo>
@@ -77,7 +77,7 @@ export function FeaturedHeroPage() {
           },
           {
             key: "2",
-            eyebrow: "Urgent",
+            eyebrow: "Nouveau",
             title: "Deuxième diapositive",
             description: "Autre annonce.",
             ctaLabel: "En savoir plus",
@@ -100,7 +100,12 @@ export function ContactSectionPage() {
         description="Pour toute question, notre équipe est à votre disposition."
         infoTitle="Informations de contact"
         infoItems={[
-          { key: "addr", icon: "📍", title: "Adresse", text: "Kinshasa, RDC" },
+          {
+            key: "addr",
+            icon: "📍",
+            title: "Adresse",
+            text: "12 rue des Lilas",
+          },
         ]}
         formTitle="Formulaire de contact"
       />

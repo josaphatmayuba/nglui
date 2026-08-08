@@ -41,8 +41,8 @@ export function SelectPage() {
     <Demo name="Select" description="Styled native <select>.">
       <Select style={{ maxWidth: "220px" }}>
         <option>Toutes les catégories</option>
-        <option>Réformes</option>
-        <option>Communiqués</option>
+        <option>Projets</option>
+        <option>Annonces</option>
       </Select>
     </Demo>
   );

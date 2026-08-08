@@ -132,7 +132,7 @@ Available components:
 | `Skeleton`                      | Pulsing placeholder block for loading states.                                             |
 | `FormGrid`                      | Responsive form field grid (`columns`).                                                   |
 | `InfoBlock`                     | Icon + title + description row, e.g. contact details.                                     |
-| `ReformCard`                    | Card with a category banner, title, meta, and stacked download/detail buttons.            |
+| `CategoryCard`                  | Card with a category banner, title, meta, and stacked download/detail buttons.            |
 | `ImageBadge`                    | Absolutely positioned badge for overlaying an image corner.                               |
 | `Pagination`                    | Page number navigation with prev/next controls.                                           |
 | `Accordion`                     | Collapsible sections driven by an `items` array.                                          |
@@ -146,7 +146,7 @@ Composite sections (built from the primitives above):
 | Component            | Notes                                                                       |
 | -------------------- | --------------------------------------------------------------------------- |
 | `FeaturedHero`       | Hero banner with eyebrow badge, title, CTA, optional image, and slide dots. |
-| `ReformSection`      | Section title + a `Grid` of `ReformCard`s + an optional "see all" button.   |
+| `CategorySection`    | Section title + a `Grid` of `CategoryCard`s + an optional "see all" button. |
 | `ContactSection`     | Page header + side-by-side info block and contact form.                     |
 | `NavbarWithDropdown` | `Navbar` variant where links can expose a hover dropdown menu.              |
 
