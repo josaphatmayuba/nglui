@@ -55,6 +55,56 @@ Removes duplicates from an array, preserving first-seen order. `uniqueBy` dedupe
 
 Returns a shallow copy of `obj` with only (or all but) the given keys.
 
+## UI components
+
+`nglui/ui` exports a small set of React components styled with an
+institutional, high-contrast design system (navy, accent red, pill-shaped
+buttons). Styles are applied inline as plain objects — no CSS file to
+import. `react` is only required as a peer dependency if you use this entry
+point; it does not affect the core utilities above.
+
+```bash
+npm install nglui react
+```
+
+```tsx
+import { Navbar, Card, Badge, Button, Input, Alert, Footer } from "nglui/ui";
+
+function Example() {
+  return (
+    <>
+      <Navbar logo={<strong>Mon site</strong>}>
+        <a href="#">Accueil</a>
+        <a href="#">Contact</a>
+      </Navbar>
+
+      <Card>
+        <Badge tone="accent">Nouveau</Badge>
+        <h3>Titre</h3>
+        <p>Contenu de la card.</p>
+        <Button variant="primary">Lire l'article</Button>
+      </Card>
+
+      <Input label="Adresse email" type="email" placeholder="vous@example.com" />
+
+      <Alert tone="warning">Vérifiez vos informations avant de continuer.</Alert>
+
+      <Footer>© 2026 Mon site</Footer>
+    </>
+  );
+}
+```
+
+![Aperçu des composants Button, Badge et Card](./assets/ui-preview.png)
+
+Available components: `Navbar`, `Footer`, `Card`, `Button` (`primary` /
+`accent` / `outline`), `Badge` (`primary` / `accent` / `info` / `warning` /
+`neutral`), `Input`, `Alert` (`info` / `success` / `warning` / `error`).
+
+Design tokens (`colors`, `radii`, `spacing`, `typography`, `shadows`) are
+also exported from `nglui/ui` for building custom components on the same
+system.
+
 ## Development
 
 ```bash
